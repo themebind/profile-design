@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="robots" content="noindex, follow">
+    <title>Profile</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <style type="text/css">
+    .profile .cover {
+        position: relative;
+        height: 340px;
+        background: no-repeat scroll center center / cover #E3E3E3;
+    }
+    .profile .cover .cover-edit {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+    }
+    .profile .cover .btn-cover {
+        border: none;
+        border-radius: 50%;
+        font-size: 18px;
+        width: 36px;
+        height: 36px;
+        padding: 0;
+        outline: none;
+        border: 1px solid #EEEEEE;
+        background-color: #FFFFFF;
+        transition: all .2s ease-in-out;
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+    }
+    .profile .cover .btn-cover:hover {
+        background-color: #F7F7F7;
+    }
+    .profile .cover .dropdown-menu {
+        box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
+    }
+    .profile .avatar {
+        position: relative;
+        width: 170px;
+        height: 170px;
+        background-color: #F7F7F7;
+        border-radius: 50%;
+        margin: -150px auto 0 auto;
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+    }
+    .profile .avatar img {
+        width: 170px;
+        height: 170px;
+        border: none;
+    }
+    .profile .avatar .avatar-edit  {
+        position: absolute;
+        right: 13px;
+        bottom: 10px;
+        z-index: 1;
+    }
+    .profile .avatar .btn-avatar {
+        border: none;
+        border-radius: 50%;
+        font-size: 16px;
+        width: 32px;
+        height: 32px;
+        padding: 0;
+        outline: none;
+        border: 1px solid #EEEEEE;
+        background-color: #FFFFFF;
+        transition: all .2s ease-in-out;
+        box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.12);
+    }
+    .profile .avatar .btn-avatar:hover {
+        background-color: #F7F7F7;
+    }
+    .profile .social {
+        margin: 20px 0;
+    }
+    .profile .social a:hover {
+        color: #5C5C5C !important;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card profile">
+            <div class="cover" style="background-image: url(https://images.unsplash.com/photo-1515940279136-2f419eea8051?w=1200)">
+                <div class="cover-edit">
+                    <input type="file" id="cover" style="display: none" accept="image/*">
+                    <div class="dropdown">
+                      <button class="btn btn-cover" type="button" data-toggle="dropdown"><i class="fas fa-pen"></i></button>
+                      <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" href="#"><i class="fas fa-upload mr-2"></i> Upload</a>
+                        <a class="dropdown-item" href="#"><i class="far fa-images mr-2"></i> Select</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"><i class="far fa-trash-alt mr-2"></i> Remove</a>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="avatar">
+                <img class="img-thumbnail rounded-circle" src="data:image/jpeg;base64,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">
+                <div class="avatar-edit">
+                    <input type="file" id="profile" style="display: none" accept="image/*">
+                    <button type="button" class="btn btn-avatar" onclick="document.getElementById('profile').click()"><i class="fas fa-camera"></i></button>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="text-center">
+                    <h2 class="text-dark font-weight-bold">Theme Bind</h2>
+                    <h6 class="text-muted"><i class="fas fa-map-marker-alt pr-2"></i>City, State, Country</h6>
+                    <div class="social">
+                        <a href="https://facebook.com/themebind" class="h4 m-2" style="color: #3B5A9A" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://twitter.com/themebind" class="h4 m-2" style="color: #1AA9E1" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/themebind/" class="h4 m-2" style="color: #4975B6" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/themebind/" class="h4 m-2" style="color: #EB544A" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/themebind" class="h4 m-2" style="color: #363636" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://themebind.com/" class="h4 m-2" style="color: #00AD42" target="_blank"><i class="fas fa-globe"></i></a>
+                    </div>
+                    <div class="row pt-2">
+                        <div class="col-6 col-sm-3">
+                            <div class="p-2 mb-2">
+                                <h4>541</h4>
+                                <span>Orders</span>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-3">
+                            <div class="p-2 mb-2">
+                                <h4>872</h4>
+                                <span>Spends</span>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-3">
+                            <div class="p-2 mb-2">
+                                <h4>398</h4>
+                                <span>Points</span>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-3">
+                            <div class="p-2 mb-2">
+                                <h4>743</h4>
+                                <span>Follow</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
